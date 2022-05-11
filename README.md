@@ -68,13 +68,31 @@ CIRCUIT DIAGRAM
 
 ### PROGRAM :
  
+ ```C++
+ #include <Servo.h>
 
+Servo servoBase;
 
+void setup() {
+   servoBase.attach(A1);
+   servoBase.write(0);
+  Serial.begin(9600);
+  
+}
 
+void loop() {
 
+  {
+    int i= Serial.parseInt();
+   servoBase.write(i);
+   delay(100);
+  }
+ }
+ ```
 
+### OUTPUT:
 
-
+![image](https://user-images.githubusercontent.com/70213227/167766239-171484f5-2c16-4c6e-8e9b-4e5785e586a3.png)
 
 
 ### RESULTS: 
